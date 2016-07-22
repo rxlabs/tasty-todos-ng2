@@ -15,12 +15,12 @@ const paths = {
   dist: 'public',
   html: 'public/**/*.html',
   images: 'public/**/*.{gif,jpg,png}',
-  scripts: 'app/**/*.js',
+  scripts: 'app/**/*.ts',
   styles: 'app/**/*.scss'
 }
 
 gulp.task('default', ['lint', 'watch'])
-gulp.task('lint', ['standard', 'sass-lint'])
+gulp.task('lint', ['sass-lint'])
 gulp.task('minify', ['htmlmin', 'imagemin'])
 gulp.task('watch', ['watch:html', 'watch:scripts', 'watch:styles'])
 
@@ -30,14 +30,6 @@ gulp.task('htmlhint', () => {
   return gulp.src(paths.html)
     .pipe($.htmlhint())
     .pipe($.htmlhint.failReporter())
-})
-
-gulp.task('standard', () => {
-  return gulp.src(paths.scripts)
-    .pipe($.standard())
-    .pipe($.standard.reporter('default', {
-      breakOnError: true
-    }))
 })
 
 gulp.task('sass-lint', () => {
@@ -59,8 +51,6 @@ gulp.task('watch:scripts', () => {
   return gulp.src(paths.scripts)
     .pipe($.watch(paths.scripts))
     .pipe($.plumber())
-    .pipe($.standard())
-    .pipe($.standard.reporter('default'))
 })
 
 gulp.task('watch:styles', () => {
