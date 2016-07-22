@@ -20,7 +20,7 @@ const paths = {
 }
 
 gulp.task('default', ['lint', 'watch'])
-gulp.task('lint', ['sass-lint'])
+gulp.task('lint', ['tslint', 'sass-lint'])
 gulp.task('minify', ['htmlmin', 'imagemin'])
 gulp.task('watch', ['watch:html', 'watch:scripts', 'watch:styles'])
 
@@ -30,6 +30,12 @@ gulp.task('htmlhint', () => {
   return gulp.src(paths.html)
     .pipe($.htmlhint())
     .pipe($.htmlhint.failReporter())
+})
+
+gulp.task('tslint', () => {
+  return gulp.src(paths.scripts)
+    .pipe($.tslint({formatter: 'verbose'}))
+    .pipe($.tslint.report())
 })
 
 gulp.task('sass-lint', () => {
@@ -51,6 +57,8 @@ gulp.task('watch:scripts', () => {
   return gulp.src(paths.scripts)
     .pipe($.watch(paths.scripts))
     .pipe($.plumber())
+    .pipe($.tslint())
+    .pipe($.tslint.report())
 })
 
 gulp.task('watch:styles', () => {
