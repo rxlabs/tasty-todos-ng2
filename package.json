@@ -1,14 +1,14 @@
 {
-  "name": "makenew-tasty-brunch",
-  "version": "1.5.2",
-  "description": "Tasty brunch app skeleton.",
+  "name": "tasty-todos-ng2",
+  "version": "0.0.0",
+  "description": "Example todo app built with Angular 2.",
   "private": true,
   "keywords": [
     "brunch"
   ],
-  "homepage": "https://github.com/makenew/tasty-brunch",
-  "bugs": "https://github.com/makenew/tasty-brunch/issues",
-  "repository": "makenew/tasty-brunch",
+  "homepage": "https://github.com/rxlabs/tasty-todos-ng2",
+  "bugs": "https://github.com/rxlabs/tasty-todos-ng2/issues",
+  "repository": "rxlabs/tasty-todos-ng2",
   "license": "MIT",
   "author": {
     "name": "Evan Sosenko",
