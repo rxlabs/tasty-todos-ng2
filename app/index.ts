@@ -1,6 +1,4 @@
-import 'zone.js'
-import 'reflect-metadata'
-
+import './polyfills'
 import main from './main'
 
 export default () => {
