@@ -1,3 +1,8 @@
+import 'zone.js'
+import 'reflect-metadata'
+
+import main from './main'
+
 export default () => {
-  /* tslint:disable:no-empty */
+  main()
 }
