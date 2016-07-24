@@ -1,4 +1,10 @@
 module.exports = function (config) {
+  let browsers = ['Chrome']
+
+  if (process.env.TRAVIS) {
+    browsers = ['Chrome_travis_ci']
+  }
+
   const ngPackages = [
     'core'
   ]
@@ -11,9 +17,14 @@ module.exports = function (config) {
     concurrency: Infinity,
     logLevel: config.LOG_INFO,
 
-    browsers: [
-      'Chrome'
-    ],
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
+
+    browsers: browsers,
 
     reporters: [
       'progress'
