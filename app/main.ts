@@ -1,3 +1,4 @@
+import { NgRedux } from 'ng2-redux';
 import { enableProdMode } from '@angular/core'
 import { bootstrap } from '@angular/platform-browser-dynamic'
 
@@ -8,5 +9,5 @@ export default () => {
     enableProdMode()
   }
 
-  bootstrap(App)
+  bootstrap(App, [NgRedux])
 }
