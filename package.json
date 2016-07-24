@@ -17,7 +17,7 @@
   "scripts": {
     "postinstall": "typings install",
 
-    "test": "if [[ -z $WERCKER ]]; then karma start --single-run; fi",
+    "test": "if [ -z $WERCKER ]; then karma start --single-run; fi",
       "pretest": "gulp lint",
 
     "build": "brunch build --production",
