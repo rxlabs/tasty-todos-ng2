@@ -5,6 +5,6 @@ import { Component } from '@angular/core'
   template: '<h1>{{title}}</h1>',
 })
 
-export class AppComponent {
+export class App {
   title = 'Tasty Todos in Angular 2'
 }
