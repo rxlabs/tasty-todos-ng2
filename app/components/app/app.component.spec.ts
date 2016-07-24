@@ -1,8 +1,9 @@
 import { AppComponent } from './app.component'
 
-describe("AppComponent", () => {
-  it("is a class", () => {
-    const x = AppComponent
-    expect(x).toBe(x)
+describe('AppComponent', () => {
+  it('is a class', () => {
+    const x = new AppComponent
+    x.title = 'Tasty'
+    expect(x.title).toBe('Tasty')
   })
 })

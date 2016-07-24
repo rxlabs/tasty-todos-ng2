@@ -2,7 +2,9 @@ import { Component } from '@angular/core'
 
 @Component({
   selector: 'tasty-app',
-  template: '<h1>Tasty Todos in Angular 2</h1>',
+  template: '<h1>{{title}}</h1>',
 })
 
-export class AppComponent {}
+export class AppComponent {
+  title = 'Tasty Todos in Angular 2'
+}
