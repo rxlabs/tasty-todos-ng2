@@ -54,6 +54,7 @@
     "brunch": "^2.5.2",
     "brunch-static": "^1.1.1",
     "brunch-typescript": "^1.8.4",
+    "codelyzer": "0.0.25",
     "cssnano": "^3.4.0",
     "del-cli": "^0.2.0",
     "digest-brunch": "^1.5.1",
