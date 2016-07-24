@@ -712,7 +712,7 @@
     },
     "codelyzer": {
       "version": "0.0.25",
-      "from": "codelyzer@latest",
+      "from": "codelyzer@0.0.25",
       "resolved": "https://registry.npmjs.org/codelyzer/-/codelyzer-0.0.25.tgz"
     },
     "coffee-script": {
@@ -4934,7 +4934,7 @@
     },
     "sprintf-js": {
       "version": "1.0.3",
-      "from": "sprintf-js@>=1.0.2 <1.1.0",
+      "from": "sprintf-js@>=1.0.3 <2.0.0",
       "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
     },
     "squeak": {
